@@ -24,11 +24,11 @@ This project aimed to enhance my software engineering skills by building and dep
 •	Created an account on Render and linked it to my GitHub account.
 •	Cloned project’s Git repository to local machine:
 git clone https://github.com/mariaspiotti/TripleTenProject5.git
-Project Setup
+## Project Setup
 1.	Opened the project directory in Visual Studio Code.
 2.	Set the Python interpreter to the one used by my environment.
 3.	Downloaded the car advertisement dataset (vehicles_us.csv) and place it in the root directory of the project.
-Project Structure
+## Project Structure
 
 ├── README.md
 ├── app.py
@@ -38,10 +38,10 @@ Project Structure
 ├── requirements.txt
 └── .streamlit
     └── config.toml
-Exploratory Data Analysis
+## Exploratory Data Analysis
 •	Created an EDA.ipynb Jupyter notebook in the notebooks directory.
 •	Performed exploratory analysis on the dataset, creating various visualizations using the plotly-express library.
-Developing the Web Application
+## Developing the Web Application
 1.	Created an app.py file in the root directory.
 2.	Import the necessary libraries:
 import streamlit as st
@@ -49,7 +49,7 @@ import pandas as pd
 import plotly.express as px
 3.	Read the dataset into a Pandas DataFrame and create visualizations.
 4.	Added interactive components such as headers, histograms, scatter plots, and checkboxes.
-Deployment
+## Deployment
 1.	Created a requirements.txt file with the necessary packages:
 pandas==2.2.3
 streamlit==1.40.1
@@ -64,6 +64,6 @@ port = 10000
 serverAddress = "0.0.0.0"
 serverPort = 10000
 3.	Deployed the application on Render by linking my GitHub repository and configuring the build and start commands.
-Submission
+## Submission
 •	Committed changes to GitHub repository: TripleTenProject5.
 •	Included the URL of the deployed app on Render.

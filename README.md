@@ -47,7 +47,7 @@ git clone https://github.com/mariaspiotti/TripleTenProject5.git
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-3.	Read the dataset into a Pandas DataFrame and create visualizations.
+3.	Read the dataset into a Pandas DataFrame and created visualizations.
 4.	Added interactive components such as headers, histograms, scatter plots, and checkboxes.
 ## Deployment
 1.	Created a requirements.txt file with the necessary packages:

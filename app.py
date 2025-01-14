@@ -8,6 +8,16 @@ data = pd.read_csv('C:\\Users\\mspio\\Documents\\TripleTenProject5VS\\vehicles_u
 
 # Header
 st.header("My Data Analysis Dashboard")
+# Slider for Price Range
+price_range = st.slider("Select Price Range", 
+                         min_value=int(data['price'].min()), 
+                         max_value=int(data['price'].max()), 
+                         value=(int(data['price'].min()), int(data['price'].max())))
+
+# Filter data based on the selected price range
+filtered_data_price = data[(data['price'] >= price_range[0]) & 
+                            (data['price'] <= price_range[1])]
+
 
 # Histogram
 st.subheader("Price Distribution")

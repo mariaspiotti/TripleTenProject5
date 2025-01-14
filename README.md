@@ -66,4 +66,4 @@ serverPort = 10000
 3.	Deployed the application on Render by linking my GitHub repository and configuring the build and start commands.
 ## Submission
 •	Committed changes to GitHub repository: TripleTenProject5.
-•	Included the URL of the deployed app on Render.
+•	Deployed app on Render: https://tripletenproject5vs.onrender.com

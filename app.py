@@ -1,19 +1,35 @@
-# Importing Required Libraries:
+# Importing Required Libraries
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-data = pd.read_csv ('C:\\Users\\mspio\\Documents\\TripleTenProject5VS\\vehicles_us.csv')
+
+# Loading the dataset
+data = pd.read_csv('C:\\Users\\mspio\\Documents\\TripleTenProject5VS\\vehicles_us.csv')
+
 # Header
 st.header("My Data Analysis Dashboard")
+
 # Histogram
-st.subheader("Price Distibrution")
+st.subheader("Price Distribution")
 histogram = px.histogram(data, x='price')
 st.plotly_chart(histogram)
 
+# Slider for Odometer
+odometer_range = st.slider("Select Odometer Range", 
+                            min_value=int(data['odometer'].min()), 
+                            max_value=int(data['odometer'].max()), 
+                            value=(int(data['odometer'].min()), int(data['odometer'].max())))
+
+# Filter data based on the selected odometer range
+filtered_data = data[(data['odometer'] >= odometer_range[0]) & 
+                     (data['odometer'] <= odometer_range[1])]
+
 # Scatter Plot
 st.subheader("Scatter Plot of Odometer Reading vs Price")
-scatter_plot = px.scatter(data, x='odometer', y='price')
+scatter_plot = px.scatter(filtered_data, x='odometer', y='price')
 st.plotly_chart(scatter_plot)
+
+# Checkbox for Histogram
 show_histogram = st.checkbox("Show Histogram")
 if show_histogram:
     st.plotly_chart(histogram)

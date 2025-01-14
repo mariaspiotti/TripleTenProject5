@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 
 # Loading the dataset
-data = pd.read_csv('C:\\Users\\mspio\\Documents\\TripleTenProject5VS\\vehicles_us.csv')
+data = pd.read_csv('vehicles_us.csv')
 
 # Header
 st.header("My Data Analysis Dashboard")

@@ -38,8 +38,3 @@ filtered_data = data[(data['odometer'] >= odometer_range[0]) &
 st.subheader("Scatter Plot of Odometer Reading vs Price")
 scatter_plot = px.scatter(filtered_data, x='odometer', y='price')
 st.plotly_chart(scatter_plot)
-
-# Checkbox for Histogram
-show_histogram = st.checkbox("Show Histogram")
-if show_histogram:
-    st.plotly_chart(histogram)
